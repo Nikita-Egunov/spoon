@@ -1,0 +1,208 @@
+@use "./variblec" as *;
+.section {
+    &1 {
+        background-image: url(../src/img/bgImage1.png);
+        height: 582px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .banner {
+            margin-top: 89px;
+        }
+    }
+    &2 {
+        .conteiner {
+            .text {
+                max-width: 500px;
+            }
+            .conteiner__inner {
+                margin-top: 54px;
+                gap: 18px;
+                justify-content: left;
+            }
+        }
+    }
+    &3 {
+
+    }
+    &4 {
+        .conteiner {
+            padding: 113px 187px 0px 151px;
+            .banner {
+                color: $darckColor;
+                a {
+                    margin-top: 5px;
+                    margin-left: 38px;
+                    color: $green;
+                    font-family: 'IBM Plex Mono';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: min(0.688rem, 11px);
+                    line-height: min(1.125rem, 18px);
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    &5 {
+        .conteiner {
+            margin-top: 117px;
+            display: flex;
+            flex-direction: column;
+            gap: 90px;
+            border-top: $greyBorder;
+            border-bottom: $greyBorder;
+            .wrapp {
+                display: flex;
+                gap: 106px;
+                @media (width <= 1000px) {
+                    &:not(:last-child) {
+                        flex-direction: column;
+                    }
+                    &:last-child {
+                        flex-direction: column-reverse;
+                    }
+                }
+                &:last-child {
+                    justify-content: end;
+                }
+                p {
+                    &:last-child {
+                        font-family: 'IBM Plex Mono';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 13px;
+                        line-height: 24px;
+
+                        color: #999999;
+                        margin-top: 27px;
+                    }
+                }
+            }
+        }
+        .banner {
+            color: $darckColor;
+            margin-top: 110px;
+            .link {
+                &--green {
+                    font-family: 'IBM Plex Mono';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: min(0.688rem, 11px);
+                    line-height: min(1.125, 18px);
+                    color: $green;
+                    text-transform: uppercase;
+                    margin-top: 13px;
+                }
+            }
+        }
+    }
+    &6 {
+        .conteiner {
+            .conteiner__inner {
+                margin-top: 155px;
+                align-items: center;
+                .wrapp {
+                    .text {
+                        &:first-child {
+                            display: flex;
+                            align-items: center;
+
+                            font-family: 'Libre Franklin';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: min(1rem, 16px);
+                            line-height: min(1.5rem, 24px);
+                            &::after {
+                                content: "";
+                                display: block;
+                                width: 30px;
+                                height: 2px;
+                                background-color: $green;
+                                margin-left: 20px;
+                            }
+                        }
+                        &:last-child {
+                            font-family: 'Libre Franklin';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: min(1.5rem, 24px);
+                            line-height: min(2.25rem, 36px);
+
+                            margin-top: 11px;
+                            max-width: 483px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.banner {
+    .main-title {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .sub-title {
+        text-align: center;
+        margin-top: 4px;
+    }
+    a {
+        margin-top: 59px;
+    }
+}
+
+.conteiner {
+    padding: 120px 135px 0px 135px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        @media (width <= 900px) {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    &--baner {   
+        padding: 99px 30px 0px 30px;
+    }
+    @media (width <= 1100px) {
+        padding: 60px 45px 0px 45px!important;
+    }
+}
+
+.card {
+    border: $greyBorder;
+    display: flex;
+    flex-direction: column;
+    padding: 51px 64px 109px 41px;
+    border: $greyBorder;
+    svg {
+        height: 60px;
+        aspect-ratio: 1;
+        
+    }
+    .text {
+        font-family: 'Libre Franklin';
+        font-style: normal;
+        font-size: min(1rem, 16px);
+        line-height: min(1.5rem, 24px);
+        margin-top: 23px;
+        &:last-child {
+            font-family: 'IBM Plex Mono';
+            font-style: normal;
+            font-weight: 400;
+            font-size: min(0.813rem, 13px);
+            line-height: min(1.5rem, 24px);
+
+            color: #999999;
+
+            margin-top: 14px;
+            max-width: 272px;
+        }
+    }
+    @media (width <= 600px) {
+        padding: 51px 64px 40px 41px;
+    }
+}

@@ -1,0 +1,91 @@
+@use "./variblec" as *;
+@use "./mixins" as *;
+
+body {
+    max-width: 1440px;
+    font-family: 'Libre Franklin';
+    font-style: normal;
+}
+
+h1 {
+    font-family: 'Libre Franklin';
+    font-style: normal;
+    font-weight: 700;
+    font-size: min(4.438rem, 71px);
+    line-height: min(4.875rem, 78px);
+    @media (width <= 800px) {
+        @include adaptiv-font(71, 30);
+    }
+}
+
+p {
+    font-family: 'Libre Franklin';
+    font-style: normal;
+    font-weight: 300;
+    font-size: min(1.5rem, 24px);
+    line-height: min(2.25rem, 36px);
+}
+
+.link {
+    text-decoration: none;
+
+    &--green {
+        color: $green;
+    }
+
+}
+.link.current {
+    width: 4px;
+    aspect-ratio: 1;
+    background-color: $lightColor;    
+}
+
+.btn {
+    color: $lightColor;
+    border-radius: 4px;
+    &--ghost {
+        border: $lightBorder;
+        padding: 11px 25px 9px 17px;
+    }
+    &--green {
+        background-color: $green;
+        padding: 17px 36px;
+        max-width: fit-content;
+        max-height: fit-content;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.link {
+    color: $lightColor;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $lightColor;
+    text-align: center;
+}
+
+.sub-title {
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: min(0.813rem, 13px);
+    line-height: min(1.5rem, 24px);
+
+    @media (width <= 800px) {
+        @include adaptiv-font(13, 12);
+    }
+}
+
+.text {
+    &--green {
+        color: $green;
+    }
+    &--grey {
+        color: #666666;
+    }
+}
